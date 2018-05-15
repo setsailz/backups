@@ -6,6 +6,7 @@ import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.PathEffect;
 import android.graphics.Rect;
+import android.support.annotation.ColorRes;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -103,7 +104,7 @@ public class DefaultRecyclerViewDivider extends RecyclerView.ItemDecoration {
         return this;
     }
 
-    public DefaultRecyclerViewDivider setColor(int color) {
+    public DefaultRecyclerViewDivider setColor(@ColorRes int color) {
         this.mColor = color;
         return this;
     }
