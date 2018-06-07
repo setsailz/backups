@@ -80,7 +80,11 @@ public class ClearEditText extends android.support.v7.widget.AppCompatEditText i
             mClearDrawable = getResources().getDrawable(R.drawable.icon_input_clear);
         }
 
-        mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth(), mClearDrawable.getIntrinsicHeight());
+        if (drawableWidth != -1 && drawableHeight != -1) {
+            mClearDrawable.setBounds(0, 0, drawableWidth, drawableHeight);
+        } else {
+            mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth(), mClearDrawable.getIntrinsicHeight());
+        }
 
         // 默认设置隐藏图标
         setClearIconVisible(false);
